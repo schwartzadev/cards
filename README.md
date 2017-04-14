@@ -6,8 +6,7 @@ This is a repository to serve as a framework and dependency for Java-based card 
  * [Player](#player)
  
 # Usage
-This can be used in a number of ways. The recommended way is to use it as a maven dependency (pending as of 4/14).
-Alternatively, you could use the [Github releases](https://github.com/schwartzadev/cards/releases) or generate your own Java JAR.
+This can be used in a number of ways. The recommended way is to use the [Github releases](https://github.com/schwartzadev/cards/releases) binary JARs, or generate your own Java JAR from the source.
 
 # Classes
 
