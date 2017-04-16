@@ -11,7 +11,7 @@ public class Hand {
 
     /**
      * Gets the <code>ArrayList<Card> cards</code> of the <code>Hand</code> object.
-     * @return <code>ArrayList&lt;Card&gt;</code>
+     * @return <code>ArrayList&lt;Card&gt;</code> list of cards in the <code>Hand</code>.
      */
     public ArrayList<Card> getCards() {
         return cards;
@@ -25,6 +25,10 @@ public class Hand {
         return (this.cards.get(0).isAce() && (this.cards.get(1).isFace()) || this.cards.get(1).getValue() == 10) || (this.cards.get(1).isAce() && ((this.cards.get(0).isFace() || this.cards.get(0).getValue() == 10)));
     }
 
+    /**
+     * Determines if the sum of the value of the cards is 21
+     * @return Boolean: true if the value is 21.
+     */
     public boolean hasTwentyOne() {
         return this.getMaxTotal() == 21;
     }
