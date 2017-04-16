@@ -110,4 +110,19 @@ public class Hand {
         return sb.toString();
     }
 
+    /**
+     * Getter for total value of the <code>Hand</code>.
+     * </br>Note that this should not be used for games like Blackjack since this values Queens as 12, Jacks as 11, etc.
+     * </br>Aces are worth 1.
+     * </br>For example, Q&hearts; = 12. A&clubs; = 1. 7&diams; = 7.
+     * @return Int of the total value of the <code>Hand</code>.
+     */
+    public int getTotal() {
+        int t;
+        for (Card c : this.getCards()) {
+            t =+ c.getValue();
+        }
+            return total;
+    }
+
 }
