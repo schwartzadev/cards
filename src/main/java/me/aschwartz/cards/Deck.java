@@ -1,7 +1,5 @@
 package me.aschwartz.cards;
 
-import me.aschwartz.cards.Card;
-
 import java.util.ArrayList;
 import java.util.Collections;
 
