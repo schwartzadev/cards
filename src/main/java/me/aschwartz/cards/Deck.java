@@ -4,11 +4,15 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 /**
- * Created by werdn on 4/7/17.
+ * Created by Andrew Schwartz on 4/7/17.
  */
 public class Deck {
     private ArrayList<Card> cards = new ArrayList<Card>();
 
+    /**
+     * Constructs a shuffled deck of 52 cards, numbered 1-13, one for each suit. (From A&spades; to K&clubs;.)
+     * @see Card
+     */
     public Deck() {
         for (int i = 1; i <= 13; i++) {
             Card card = new Card(i, Card.Suit.spades);
@@ -23,17 +27,29 @@ public class Deck {
         this.shuffle();
     }
 
+    /**
+     * "Draws" the top card from the deck.
+     * This gets the top card from the deck, removes it, and then returns it.
+     * @return The card from the very top of the deck
+     */
     public Card draw() {
         Card c = this.cards.get(0);
         this.cards.remove(0);
         return c;
     }
 
-    void shuffle() {
+    /**
+     * Shuffles the cards using Collections.shuffle
+     * @see Collections
+     */
+    public void shuffle() {
         Collections.shuffle(this.cards);
     }
 
-
+    /**
+     * Thit method simply returns the cards ArrayList
+     * @return <code>ArrayList<Card> cards</code>
+     */
     @Override
     public String toString() {
         return cards.toString();
