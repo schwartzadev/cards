@@ -20,6 +20,9 @@ public class Hand {
     public boolean hasTwentyOne() {
         return this.getMaxTotal() == 21;
     }
+    public Hand() {
+
+    }
 
     public boolean isBusted() {
         return this.getMaxTotal() > 21;
