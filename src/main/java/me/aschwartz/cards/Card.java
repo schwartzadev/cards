@@ -1,7 +1,7 @@
 package me.aschwartz.cards;
 
 /**
- * Created by werdn on 4/7/17.
+ * Created by Andrew Schwartz on 4/7/17.
  */
 public class Card {
     private String kind;
@@ -22,19 +22,45 @@ public class Card {
     private final int value;
     private final Suit suit;
 
+    /**
+     * Creates a Card instance
+     * </br>
+     * <b>This shouldn't be necessary to use on its own, and Cards should always be created through a Deck instance.</b>
+     * @param value The value of the card. Aces are 1, Jacks are 11, Queens are 12, Kings are 13.
+     * @param suit An enum of suits (spades, hearts, diamonds, clubs)
+     * @see Deck
+     */
     public Card(int value, Suit suit) {
         this.value = value;
         this.suit = suit;
     }
 
+    /**
+     * This is the classic toString method, and it will return the DisplayValue of the card (numbers for 2-10, letters for aces, queens, etc.), as well as the Unicode symbol for the suit
+     * @return the suit and display value of the card, such as "Q&hearts;"
+     */
     @Override
     public String toString() {
         return (getDisplayValue() + suit.getSymbol());
     }
 
-    boolean isAce() { return this.value == 1; }
-    boolean isFace() { return this.value >= 11; }
+    /**
+     * Determines whether or not a card is an ace.
+     * @return True, if the card is an ace. False otherwise.
+     */
+    public boolean isAce() { return this.value == 1; }
 
+    /**
+     * Determines whether or not a card is an face card: Jack, Queen, or King.
+     * Note that this does return false if the card is an ace.
+     * @return True, if the card is a face card. False otherwise.
+     */
+    public boolean isFace() { return this.value >= 11; }
+
+    /**
+     * Gets the <b>display</b> value for a given card, taking into account face cards and aces
+     * @return Either the number or letter value of the card, as a String
+     */
     public String getDisplayValue() {
         if(this.isAce()) {
             return "A";
@@ -56,13 +82,12 @@ public class Card {
         return "?";
     }
 
+    /**
+     * Gets the value without any alterations for face cards or aces, for the given card
+     * @return The value of the card, as an int
+     */
     public int getValue() {
         return value;
     }
-
-    public String getKind() {
-        return kind;
-    }
-
 
 }
