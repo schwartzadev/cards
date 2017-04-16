@@ -54,14 +54,19 @@ public class Hand {
         return this.getTotal().get(this.getTotal().size()-1);
     }
 
-    public void print() {
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
         for (Card c : this.getCards()) {
-            System.out.print(c + " ");
+            // System.out.print(c + " ");
+            sb.append(c + " ");
         }
         for (int i : this.getTotal()) {
-            System.out.print("(" + i + ") ");
+            sb.append("(" + i + ") ");
+            // System.out.print("(" + i + ") ");
         }
-        System.out.println("");
+        //System.out.println("");
+        return sb.toString();
     }
 
 }
