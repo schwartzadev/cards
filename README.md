@@ -1,5 +1,7 @@
 # me.aschwartz.cards
-[See the new Javadoc!](https://schwartzadev.github.io/cards/)
+# [See the new Javadoc!](https://schwartzadev.github.io/cards/)
+
+
 This is a repository to serve as a framework and dependency for Java-based card games. The repository includes 4 classes:
  * [Card](#card)
  * [Deck](#deck)
