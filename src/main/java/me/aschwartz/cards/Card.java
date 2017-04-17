@@ -36,15 +36,6 @@ public class Card {
     }
 
     /**
-     * This is the classic toString method, and it will return the DisplayValue of the card (numbers for 2-10, letters for aces, queens, etc.), as well as the Unicode symbol for the suit
-     * @return the suit and display value of the card, such as "Q&hearts;"
-     */
-    @Override
-    public String toString() {
-        return (getDisplayValue() + suit.getSymbol());
-    }
-
-    /**
      * Determines whether or not a card is an ace.
      * @return True, if the card is an ace. False otherwise.
      */
@@ -80,6 +71,14 @@ public class Card {
         }
 
         return "?";
+    }
+    /**
+     * This is the classic toString method, and it will return the DisplayValue of the card (numbers for 2-10, letters for aces, queens, etc.), as well as the Unicode symbol for the suit
+     * @return the suit and display value of the card, such as "Q&hearts;"
+     */
+    @Override
+    public String toString() {
+        return (getDisplayValue() + suit.getSymbol());
     }
 
     /**

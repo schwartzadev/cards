@@ -54,4 +54,13 @@ public class Deck {
     public String toString() {
         return cards.toString();
     }
+
+    /**
+     * Gets the list of all cards in the deck.
+     * @return <code>ArrayList&lt;Card&gt;</code> list of all cards in the deck
+     */
+    public ArrayList<Card> getCards() {
+        return cards;
+    }
+
 }

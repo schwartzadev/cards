@@ -10,11 +10,13 @@ public class Hand {
     private int total;
 
     /**
-     * Gets the <code>ArrayList<Card> cards</code> of the <code>Hand</code> object.
-     * @return <code>ArrayList&lt;Card&gt;</code> list of cards in the <code>Hand</code>.
+     * Creates a new Hand. Not the preferred method for using/creating a <code>Hand</code>.
+     * </br><b>This should not be used to create a new <code>Hand</code>.</b>
+     * </br>Instead, create a new <code>Player</code> object, then use <code>Player.hand</code>
+     * @see Player
      */
-    public ArrayList<Card> getCards() {
-        return cards;
+    public Hand() {
+
     }
 
     /**
@@ -31,16 +33,6 @@ public class Hand {
      */
     public boolean hasTwentyOne() {
         return this.getMaxTotal() == 21;
-    }
-
-    /**
-     * Creates a new Hand. Not the preferred method for using/creating a <code>Hand</code>.
-     * </br><b>This should not be used to create a new <code>Hand</code>.</b>
-     * </br>Instead, create a new <code>Player</code> object, then use <code>Player.hand</code>
-     * @see Player
-     */
-    public Hand() {
-
     }
 
     /**
@@ -125,4 +117,11 @@ public class Hand {
             return total;
     }
 
+    /**
+     * Gets the <code>ArrayList<Card> cards</code> of the <code>Hand</code> object.
+     * @return <code>ArrayList&lt;Card&gt;</code> list of cards in the <code>Hand</code>.
+     */
+    public ArrayList<Card> getCards() {
+        return cards;
+    }
 }
